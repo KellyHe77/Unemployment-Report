@@ -31,9 +31,15 @@ Run the unemployment report:
 python app/unemployment.py
 ```
 
-# or pass env var from command line
+or pass env var from command line
 ```sh
 ALPHAVANTAGE_API_KEY="________" python app/unemployment.py
+```
+
+Run stocks report:
+
+```sh
+python app/stocks.py
 ```
 
 
