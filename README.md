@@ -33,7 +33,7 @@ python app/unemployment.py
 
 # or pass env var from command line
 ```sh
-ALPHAVANTAGE_API_KEY="abc123" python app/unemployment.py
+ALPHAVANTAGE_API_KEY="________" python app/unemployment.py
 ```
 
 
