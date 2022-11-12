@@ -60,3 +60,11 @@ Then create a local ".env" file and provide the key like this:
 
 ALPHAVANTAGE_API_KEY="_________"
 ```
+
+## Testing
+
+Run tests:
+
+```sh
+pytest
+```
