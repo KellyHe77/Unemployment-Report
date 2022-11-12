@@ -1,20 +1,20 @@
 # this is the "app/stocks.py" file...
-
-
 from pandas import read_csv
 
 from app.alpha import API_KEY
 
+
+#def format_usd(my_price:float) -> str:
 def format_usd(my_price):
     return f"${my_price:,.2f}"
 
 
-def fetch_stocks_data(symbol):
+def fetch_stock_data(symbol="NFLX"):
+    """Returns a pandas dataframe with the stock data"""
+
     request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEY}&datatype=csv"
 
-    df = read_csv(request_url)
-
-    return df
+    return read_csv(request_url)
 
 
 
@@ -22,10 +22,10 @@ if __name__ == "__main__":
 
     print("STOCKS REPORT...")
 
-    symbol = input("Please input a crypto symbol (default: 'NFLX'): ") or "NFLX"
-    print("SYMBOL:", symbol)
+    selected_symbol = input("Please input a crypto symbol (default: 'NFLX'): ") or "NFLX"
+    print("SYMBOL:", selected_symbol)
 
-    df = fetch_stocks_data(symbol)
+    df = fetch_stock_data(selected_symbol)
 
     print(df.columns)
     print(df.head())
