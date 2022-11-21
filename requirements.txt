@@ -19,3 +19,6 @@ pytest
 
 # using bsoup in testing the web app:
 beautifulsoup4 
+
+#the heroku server wants to use this package to run our web app
+gunicorn 
